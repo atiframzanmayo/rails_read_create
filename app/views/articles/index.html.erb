@@ -1,0 +1,12 @@
+<h1>Articles</h1>
+
+
+  <% @articles.each do |article| %>
+<button style=border: "solid 2px">
+<a href="/articles/<%= article.id %>">
+        <%= article.title %>
+      </a>
+</button><br>
+  <% end %>
+  <br>
+  <%= link_to "submit form", new_article_path %>
